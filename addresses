@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        return 1;
+    }
+
+    unsigned int address = (unsigned int)atoi(argv[1]);
+
+    printf("The address %u contains:\n", address);
+    printf("page number = %u\n", address / 4096);
+    printf("offset = %u\n", address % 4096);
+
+    return 0;
+}
